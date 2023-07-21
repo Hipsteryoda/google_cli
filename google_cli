@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+BASE_URL="https://www.google.com/search?q="
+BROWSER=xdg-open
+SEARCH_STRING=$(echo ${1} | sed 's/\ /\+/g')
+
+$BROWSER $BASE_URL$SEARCH_STRING 1>/dev/null 2>/dev/null
+#echo $BASE_URL$SEARCH_STRING
+
+
